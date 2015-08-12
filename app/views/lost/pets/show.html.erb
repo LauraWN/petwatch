@@ -33,4 +33,5 @@
 <h3>Phone Number</h3> <%= @user.phone %>
 </div>
 
-   button = BROWSE FOUND PETS
+<%= link_to "BROWSE FOUND PETS", pets_path(@pets.all) %>
+  <button type = "button" id="browse-found-pets">BROWSE FOUND PETS</button>
