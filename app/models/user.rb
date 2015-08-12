@@ -1,3 +1,3 @@
 class User < ActiveRecord::Base
-  has_one :pet, dependent: :destroy
-end 
+  has_many :pets, dependent: :destroy
+end
