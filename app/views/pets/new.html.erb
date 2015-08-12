@@ -1,0 +1,47 @@
+
+<h2>Missing Pet Information</h2>
+
+<%= form_for @pets do |f| %>
+
+  <%= f.label :animal_type, "Did you lose a cat or a dog?" %>
+  <%= f.text_field :animal_type %>
+
+  <%= f.label :size, "Pet size" %>
+  <%= f.text_field :size %>
+
+  <%= f.label :breed %>
+  <%= f.text_field :breed, :value => "Breed" %>
+
+  <%= f.label :gender %>
+  <%= f.text_field :gender, :value => "Gender" %>
+
+  <%= f.label :color %>
+  <%= f.text_field :color, :value => "Color" %>
+
+  <%= f.label :lost_date %>
+  <%= f.text_field :lost_date, :value => "Date Lost" %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name, :value => "Name" %>
+
+  <%= f.label :lost_location %>
+  <%= f.text_field :lost_location, :value => "Location Lost" %>
+
+  <h2>Your Information</h2>
+
+  <%= fields_for @users do |u| %>
+
+  <%= u.label :name %>
+  <%= u.text_field :name, :value => "Your Name" %>
+
+  <%= u.label :email %>
+  <%= u.text_field :email, :value => "Your Email" %>
+
+  <%= u.label :phone %>
+  <%= u.text_field :phone, :value => "Your Phone" %>
+
+  <% end %>
+
+  <%= f.submit %>
+
+  <% end %>
