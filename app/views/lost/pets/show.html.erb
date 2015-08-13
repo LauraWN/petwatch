@@ -1,1 +1,37 @@
-<h1>lost pets showpage</h1>
+<h1>PET WATCH</h1>
+
+  <div>
+    <h2>Thanks for submitting your pet's information!</h2>
+  </div>
+
+    <div>
+      <h3>We know it's a tough time for you, so we will keep you updated via email if anyone alerts us to your missing pet.</h3
+    </div>
+
+  <div>
+    <h2> <%= @pet.name %>  </h2>
+  </div>
+
+<!-- link to photo uploaded with paperclip gem goes here. -->
+
+  <div>
+
+      <h3>Size</h3> <%= @pet.size %>
+      <h3>Breed</h3> <%= @pet.breed %>
+      <h3>Color</h3> <%= @pet.color %>
+      <h3>Date Lost</h3> <% @pet.lost_date %>
+  </div>
+
+  <div>
+    <h2>Contact Information</h2>
+  </div>
+
+  <div>
+      <h3>Name</h3> <%= @user.name %>
+      <h3>Email Address</h3> <%= @user.email %>
+      <h3>Phone Number</h3> <%= @user.phone %>
+  </div>
+
+<%= link_to "BROWSE ALL FOUND PETS", found_pets_path(@pets.all), class: "browse-button" %>
+
+<%= render partial: "views/users/_shelters" %>
