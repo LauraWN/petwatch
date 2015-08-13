@@ -1,0 +1,32 @@
+
+
+<h2>Thanks for submitting your lost pet's information!</h2>
+
+<h3>We know it's a tough time for you, so we will keep you updated via email if anyone alerts us to your missing pet.</h3>
+
+
+<h2><%= pet.name %></h2>
+
+<!-- below is the code that it says the gem paperclip needs to show an image -->
+<%= link_to image_tag(@post.image.url(:med)), @post.image.url %>
+
+
+
+  <%= @user.pet.each do |answer| %>
+
+
+  <h3>Size</h3> <%= pet.size %>
+  <h3>Breed</h3> <%= pet.breed %>
+  <h3>Color</h3> <%= pet.color %>
+  <h3>Date Lost</h3> <%= pet.lost_date %>
+  <% end %>
+
+  <h2>Contact Information</h2>
+  <h3>Name</h3>
+  <h3>Email Address</h3>
+  <h3>Phone Number</h3>
+
+button for =  BROWSE FOUND PETS
+<% end %>
+
+<h3><%= @pet.new %></h3>
