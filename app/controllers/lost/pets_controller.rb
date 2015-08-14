@@ -13,8 +13,16 @@ def create
 redirect_to [:lost,@pet]
 end
 
-def show
+def edit
+ @pet = Pet.find(params[:id])
+ @user = User.find(params[:id])
+end
 
+def update
+
+end
+
+def show
   @pet = Pet.find(params[:id])
   @user = User.find(params[:id])#we will be assuming 1 to 1 user pet generation until establish otherwise
 end
