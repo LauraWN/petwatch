@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
-
+# Gemfile for images. Told to add these 2 lines to the gemfile.
+gem 'paperclip'
+gem 'aws-sdk'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
 # Use postgresql as the database for Active Record
