@@ -13,12 +13,21 @@ def create
 redirect_to [:lost,@pet]
 end
 
-def edit
- @pet = Pet.find(params[:id])
- @user = User.find(params[:id])
+def edit #again assuming right now that 1 to 1 :id association user to pet
+ @pets = Pet.find(params[:id])
+ @users = User.find(params[:id])
+
 end
 
 def update
+  @user = User.find(params[:id])
+  @pet = Pet.find(params[:id])
+
+  if( @user.update(user_params(params[:user])) && @pet.update(pet_params(params[:pet])) )
+    redirect_to [:lost,@pet]
+  else
+    render 'edit'
+  end
 
 end
 
