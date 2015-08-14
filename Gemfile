@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 # Gemfile for images. Told to add these 2 lines to the gemfile.
+gem 'font-awesome-rails'
 gem 'paperclip'
 gem 'aws-sdk'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
